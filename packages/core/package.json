@@ -1,0 +1,17 @@
+{
+  "name": "@beacon/core",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "main": "./src/index.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4",
+    "@beacon/tsconfig": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
