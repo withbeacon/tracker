@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "main": "index.js",
   "license": "MIT",
-  "main": "./src/index.ts",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
   "scripts": {
     "build": "tsc"
   },
