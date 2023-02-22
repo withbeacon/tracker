@@ -2,9 +2,8 @@
   "name": "@withbeacon/core",
   "version": "0.0.3",
   "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "license": "MIT",
-  "type": "module",
-  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -12,13 +11,8 @@
     },
     "./package.json": "./package.json"
   },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "dist/*"
-      ]
-    }
-  },
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
   "scripts": {
     "build": "tsup"
   },
