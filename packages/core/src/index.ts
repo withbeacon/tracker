@@ -1,13 +1,15 @@
-import { AnalyticsProps } from "./types";
+import { AnalyticsProps, SendEvent } from "./types";
 
 export function track({ before }: AnalyticsProps): void | undefined {
   if (typeof window === "undefined") {
     return;
   }
 
-  if (before) {
-    window.beacon.before = before;
-  }
+  let beacon = {
+    before: (before ? before : (event) => event) as SendEvent,
+  };
+
+  window.beacon = beacon;
 
   if (window.beacon.before({ pathname: window.location.pathname })) {
     return;
