@@ -1,0 +1,22 @@
+{
+  "name": "@beacon/solid-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@beacon/core": "*",
+    "@beacon/tsconfig": "*",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "solid-js": "^1.6.11"
+  }
+}
