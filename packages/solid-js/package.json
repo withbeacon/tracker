@@ -1,22 +1,28 @@
 {
   "name": "@withbeacon/solid-js",
-  "version": "1.0.0",
-  "description": "",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup"
+  },
   "devDependencies": {
-    "@withbeacon/core": "workspace:*",
     "@withbeacon/tsconfig": "*",
+    "tsup": "^6.6.3",
     "typescript": "^4.7.4"
   },
   "dependencies": {
+    "@withbeacon/core": "*",
     "solid-js": "^1.6.11"
   }
 }
