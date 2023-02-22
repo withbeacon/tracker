@@ -1,0 +1,12 @@
+{
+  "extends": "@beacon/tsconfig/react-library",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+  "compilerOptions": {
+    "outDir": "./build"
+  },
+  "include": ["src"]
+}
+
