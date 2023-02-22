@@ -1,5 +1,5 @@
 {
-  "extends": "@beacon/tsconfig/react-library",
+  "extends": "@withbeacon/tsconfig/react-library",
   "main": "./build/index.js",
   "compilerOptions": {
     "outDir": "./build"

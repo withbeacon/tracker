@@ -1,4 +1,4 @@
-import type { AnalyticsProps } from "@beacon/core";
+import type { AnalyticsProps } from "@withbeacon/core";
 import { useAnalytics } from "./hooks";
 
 export function Analytics(props: AnalyticsProps){

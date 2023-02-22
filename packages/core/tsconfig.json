@@ -1,5 +1,5 @@
 {
-  "extends": "@beacon/tsconfig/base",
+  "extends": "@withbeacon/tsconfig/base",
   "include": ["src"],
   "compilerOptions": {
     "outDir": "build"
