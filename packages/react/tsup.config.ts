@@ -9,5 +9,10 @@ export default defineConfig({
   format: ["esm", "cjs"],
   outDir: "dist", 
   entry: ["./src/index.tsx"],
+  esbuildOptions: (options) => {
+    options.banner = {
+      js: '"use client";',
+    };
+  },
 });
 
