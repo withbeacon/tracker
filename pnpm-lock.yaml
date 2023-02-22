@@ -42,7 +42,7 @@ importers:
   packages/react:
     specifiers:
       '@types/react': ^18.0.28
-      '@withbeacon/core': workspace:*
+      '@withbeacon/core': '*'
       '@withbeacon/tsconfig': '*'
       react: ^18.2.0
       tsup: ^6.6.3
@@ -58,15 +58,17 @@ importers:
 
   packages/solid-js:
     specifiers:
-      '@withbeacon/core': workspace:*
+      '@withbeacon/core': '*'
       '@withbeacon/tsconfig': '*'
       solid-js: ^1.6.11
+      tsup: ^6.6.3
       typescript: ^4.7.4
     dependencies:
+      '@withbeacon/core': link:../core
       solid-js: 1.6.11
     devDependencies:
-      '@withbeacon/core': link:../core
       '@withbeacon/tsconfig': link:../tsconfig
+      tsup: 6.6.3_typescript@4.9.5
       typescript: 4.9.5
 
   packages/tsconfig:
