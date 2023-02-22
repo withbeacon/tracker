@@ -1,5 +1,5 @@
 {
-  "name": "@beacon/core",
+  "name": "@withbeacon/core",
   "version": "0.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "typescript": "^4.7.4",
-    "@beacon/tsconfig": "*"
+    "@withbeacon/tsconfig": "*"
   },
   "publishConfig": {
     "access": "public"

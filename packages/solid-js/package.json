@@ -1,5 +1,5 @@
 {
-  "name": "@beacon/solid-js",
+  "name": "@withbeaconacon/solid-js",
   "version": "1.0.0",
   "description": "",
   "main": "./build/index.js",
@@ -12,8 +12,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@beacon/core": "*",
-    "@beacon/tsconfig": "*",
+    "@withbeaconacon/core": "*",
+    "@withbeaconacon/tsconfig": "*",
     "typescript": "^4.7.4"
   },
   "dependencies": {

@@ -1,5 +1,5 @@
 {
-  "name": "@beacon/react",
+  "name": "@withbeacon/react",
   "version": "1.0.0",
   "description": "",
   "main": "./build/index.js",
@@ -11,8 +11,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@beacon/core": "*",
-    "@beacon/tsconfig": "*",
+    "@withbeacon/core": "*",
+    "@withbeacon/tsconfig": "*",
     "@types/react": "^18.0.28",
     "typescript": "^4.7.4"
   },

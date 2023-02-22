@@ -1,6 +1,6 @@
-import type { AnalyticsProps } from "@beacon/core";
+import type { AnalyticsProps } from "@withbeaconthbeacon/core";
 import { useEffect } from "react";
-import { track } from "@beacon/core";
+import { track } from "@withbeaconthbeacon/core";
 
 export function useAnalytics({ before, ...props }: AnalyticsProps) {
   useEffect(
