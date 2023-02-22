@@ -2,8 +2,8 @@
   "name": "@withbeacon/solid-js",
   "version": "1.0.0",
   "description": "",
-  "main": "./build/index.js",
-  "types": "./build/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@withbeacon/core": "*",
+    "@withbeacon/core": "workspace:*",
     "@withbeacon/tsconfig": "*",
     "typescript": "^4.7.4"
   },

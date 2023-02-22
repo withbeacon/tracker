@@ -1,7 +1,7 @@
 {
   "extends": "@withbeacon/tsconfig/react-library",
   "compilerOptions": {
-    "outDir": "./build",
+    "outDir": "./dist",
     "jsx": "preserve"
   },
   "include": ["src"]

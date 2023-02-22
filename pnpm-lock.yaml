@@ -54,7 +54,7 @@ importers:
 
   packages/solid-js:
     specifiers:
-      '@withbeacon/core': '*'
+      '@withbeacon/core': workspace:*
       '@withbeacon/tsconfig': '*'
       solid-js: ^1.6.11
       typescript: ^4.7.4
