@@ -1,12 +1,12 @@
 import { AnalyticsProps, SendEvent } from "./types";
 
-export function track({ before }: AnalyticsProps): void | undefined {
+export function track(props: AnalyticsProps | undefined): void | undefined {
   if (typeof window === "undefined") {
     return;
   }
 
   let beacon = {
-    before: (before ? before : (event) => event) as SendEvent,
+    before: (props?.before ? props.before : (event) => event) as SendEvent,
   };
 
   window.beacon = beacon;
