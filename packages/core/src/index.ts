@@ -1,6 +1,6 @@
 import { AnalyticsProps, SendEvent } from "./types";
 
-export function track(props: AnalyticsProps | undefined): void | undefined {
+export function track(props?: AnalyticsProps | undefined): void | undefined {
   if (typeof window === "undefined") {
     return;
   }
