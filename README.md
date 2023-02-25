@@ -1,73 +1,137 @@
-# Turborepo starter
+<div text-align="center" align="center">
+  <img
+		src="https://raw.githubusercontent.com/withbeacon/beacon/main/packages/ui/src/assets/logo.svg" 
+		alt="Beacon" 
+		height="64px" 
+		width="64px"
+	>
+	<h1>Beacon</h1>
+</div>
+<p align="center">Utility packages to help you track analytics in your app.</p>
 
-This is an official pnpm starter turborepo.
+> PLEASE NOTE - Many packages specified here are not currently available, Beacon is highly under development.
 
-## What's inside?
+## Table of Contents
+- [React](#react)
+- [NextJS](#nextjs)
+- [Solid JS](#solid-js)
+- [Svelte](#svelte)
+- [VueJS](#vuejs)
+- [Qwik](#qwik)
 
-This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
+## React
+Firstly, add the `@withbeacon/react` package with npm or any other package manager:
+```sh
+npm install @withbeacon/react
 ```
-cd my-turborepo
-pnpm run build
-```
+and then add the `Analytics` component in your app:
+```tsx
+import { Analytics } from "@withbeacon/react";
 
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm run dev
+function App() {
+  return (
+    <>
+      {/* ... */}
+      <Analytics />
+    </>
+}
 ```
 
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-pnpm dlx turbo login
+## NextJS
+Firstly, add the `@withbeacon/next` package with npm or any other package manager:
+```sh
+npm install @withbeacon/next
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+and then add the `Analytics` component in your app:
+```tsx
+import { Analytics } from "@withbeacon/react";
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
+function App() {
+  return (
+    <>
+      {/* ... */}
+      <Analytics rewrites={true /* remove rewrites prop if not proxying your requests with withBeacon() function */} />
+    </>
+}
 ```
-pnpm dlx turbo link
+Optionally, you can also wrap your nextjs config with `withBeacon` function to proxy your requests and bypass adblockers.
+```ts
+import { withBeacon } from "@withbeacon/next";
+
+export default withBeacon({
+  // ... your config
+});
 ```
 
-## Useful Links
+## Solid JS
+Firstly, add the `@withbeacon/solid-js` package with npm or any other package manager:
+```sh
+npm install @withbeacon/solid-js
+```
+and then add the `Analytics` component in your app:
+```tsx
+import { Analytics } from "@withbeacon/react";
 
-Learn more about the power of Turborepo:
+function App() {
+  return (
+    <>
+      {/* ... */}
+      <Analytics />
+    </>
+}
+```
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+## Svelte
+Firstly, add the `@withbeacon/svelte` package with npm or any other package manager:
+```sh
+npm install @withbeacon/svelte
+```
+and then add the `Analytics` component in your app:
+```svelte
+<script>
+  import { Analytics } from "@withbeacon/react";
+</script>
+
+<div>
+  <!-- ... -->
+  <Analytics />
+</div>
+```
+
+## VueJS
+Firstly, add the `@withbeacon/vue` package with npm or any other package manager:
+```sh
+npm install @withbeacon/vue
+```
+and then add the `Analytics` component in your app:
+```svelte
+<script>
+  import Analytics from "@withbeacon/vue/analytics.vue";
+</script>
+
+<template>
+  <!-- ... -->
+  <Analytics />
+</template>
+```
+
+## Qwik
+Firstly, add the `@withbeacon/qwik` package with npm or any other package manager:
+```sh
+npm install @withbeacon/solid-js
+```
+and then add the `Analytics` component in your app:
+```tsx
+import { Analytics } from "@withbeacon/qwik";
+import { component$ } from '@builder.io/qwik';
+
+const App = component$(() => {
+  return (
+    <>
+      {/* ... */}
+      <Analytics />
+    </>
+  );
+});
+```
